@@ -1,28 +1,56 @@
-.App {
-  text-align: center;
+.prize {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.prize__container {
+  width: 400px;
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+  margin: 30px 0 0 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.container__area {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.App-title {
-  font-size: 1.5em;
+.begin__btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: aliceblue;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: calc(50% - 50px);
+  top: calc(50% - 20px);
 }
 
-.App-intro {
-  font-size: large;
+.area__row {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.row__item {
+  width: 90px;
+  height: 90px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row__item-active {
+  background-color: aquamarine;
 }
