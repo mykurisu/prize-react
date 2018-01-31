@@ -21,17 +21,21 @@ class App extends Component {
       prizeId: null,
       times: 0,
       actTimes: 0,
+      isRolling: false,
     }
   }
   handleBegin () {
-    this.setState({
-      activedId: '',
-      prizeId: null,
-      times: 0,
-      actTimes: 0
-    }, () => {
-      this.handlePlay()
-    })
+    if (!this.state.isRolling) {
+      this.setState({
+        activedId: '',
+        prizeId: null,
+        times: 0,
+        actTimes: 0,
+        isRolling: true
+      }, () => {
+        this.handlePlay()
+      }) 
+    }
   }
   handlePlay() {
     let prize = Math.floor(Math.random() * 12)
@@ -49,6 +53,9 @@ class App extends Component {
 
       if (this.state.activedId === this.state.prizeId && this.state.actTimes > this.state.times) {
         clearInterval(this.begin)
+        this.setState({
+          isRolling: false
+        })
         return
       }
 
